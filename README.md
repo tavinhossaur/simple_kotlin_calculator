@@ -6,4 +6,6 @@ A simple calculator developed in Kotlin.
 - Design developed in Android Studio with XML attributes
 - Data processing (script) done in Kotlin
 
+https://www.youtube.com/watch?v=nvXy_KYIzpM
+
 Developed by Octávio Barassa
