@@ -8,4 +8,4 @@ A simple calculator developed in Kotlin.
 
 https://www.youtube.com/watch?v=nvXy_KYIzpM
 
-Developed by Octávio Barassa
+Developed by Octávio Barassa (09/29/2019)
