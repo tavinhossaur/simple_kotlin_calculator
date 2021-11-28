@@ -26,64 +26,67 @@ class MainActivity : AppCompatActivity() {                   // Activity Main
         }
 
         button_parenteses_esq.setOnClickListener {
-            input.text = addInputText("(")        // Botão que insere o "("
+            input.text = addInput("")        // Botão que insere o "("
+        }
+        button_parenteses_esq.setOnClickListener {
+            input.text = addInput("(")        // Botão que insere o "("
         }
         button_parenteses_dir.setOnClickListener {
-            input.text = addInputText(")")        // Botão que insere o ")"
+            input.text = addInput(")")        // Botão que insere o ")"
         }
         button_0.setOnClickListener {
-            input.text = addInputText("0")        // Botão que insere o "0"
+            input.text = addInput("0")        // Botão que insere o "0"
         }
         button_1.setOnClickListener {
-            input.text = addInputText("1")        // Botão que insere o "1"
+            input.text = addInput("1")        // Botão que insere o "1"
         }
         button_2.setOnClickListener {
-            input.text = addInputText("2")        // Botão que insere o "2"
+            input.text = addInput("2")        // Botão que insere o "2"
         }
         button_3.setOnClickListener {
-            input.text = addInputText("3")        // Botão que insere o "3"
+            input.text = addInput("3")        // Botão que insere o "3"
         }
         button_4.setOnClickListener {
-            input.text = addInputText("4")        // Botão que insere o "4"
+            input.text = addInput("4")        // Botão que insere o "4"
         }
         button_5.setOnClickListener {
-            input.text = addInputText("5")        // Botão que insere o "5"
+            input.text = addInput("5")        // Botão que insere o "5"
         }
         button_6.setOnClickListener {
-            input.text = addInputText("6")        // Botão que insere o "6"
+            input.text = addInput("6")        // Botão que insere o "6"
         }
         button_7.setOnClickListener {
-            input.text = addInputText("7")        // Botão que insere o "7"
+            input.text = addInput("7")        // Botão que insere o "7"
         }
         button_8.setOnClickListener {
-            input.text = addInputText("8")        // Botão que insere o "8"
+            input.text = addInput("8")        // Botão que insere o "8"
         }
         button_9.setOnClickListener {
-            input.text = addInputText("9")        // Botão que insere o "9"
+            input.text = addInput("9")        // Botão que insere o "9"
         }
-        button_espaco.setOnClickListener {
-            input.text = addInputText(" ")        // Botão que insere o " " (espaço)
+        button_virgula.setOnClickListener {
+            input.text = addInput(".")        // Botão que insere o "."
         }
         button_divisao.setOnClickListener {
-            input.text = addInputText("÷")        // Botão que insere o "÷"
+            input.text = addInput("÷")        // Botão que insere o "÷"
         }
         button_multiplicacao.setOnClickListener {
-            input.text = addInputText("×")        // Botão que insere o "×"
+            input.text = addInput("×")        // Botão que insere o "×"
         }
         button_subtracao.setOnClickListener {
-            input.text = addInputText("-")        // Botão que insere o "-"
+            input.text = addInput("-")        // Botão que insere o "-"
         }
         button_adicao.setOnClickListener {
-            input.text = addInputText("+")        // Botão que insere o "+"
+            input.text = addInput("+")        // Botão que insere o "+"
         }
         button_igual.setOnClickListener {
-            showResult()                                    // Botão que chama a função que exibe o resultado
+            mostrarResultado()                                    // Botão que chama a função que exibe o resultado
             input.text = ""
         }
 
     }
 
-    private fun addInputText(buttonValue: String): String {
+    private fun addInput(buttonValue: String): String {
         return "${input.text}$buttonValue"                  // Função que permite inserir os caracteres na caixa de texto
     }
 
@@ -93,7 +96,7 @@ class MainActivity : AppCompatActivity() {                   // Activity Main
         return expression                                                            // e os interpreta como expressões na biblioteca de código de equações matemáticas
     }
 
-    private fun showResult() {                                                       // Função que mostra o resultado
+    private fun mostrarResultado() {                                                       // Função que mostra o resultado
         try{
             val expression = getInputExpression()
             val resultado = Expression(expression).calculate()  // calculate() é quem faz o calculo a partir das expressões matemáticas
